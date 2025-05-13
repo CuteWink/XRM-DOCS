@@ -1,24 +1,96 @@
 import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export const zhNavbar = defineNavbarConfig([
-  { text: '首页', link: '/' },
-  { text: '博客', link: '/blog/' },
-  { text: '标签', link: '/blog/tags/' },
-  { text: '归档', link: '/blog/archives/' },
   {
-    text: '笔记',
-    items: [{ text: '示例', link: '/notes/demo/README.md' }]
+    text: '指南',
+    icon: 'icon-park-outline:guide-board',
+    link: '/notes/theme/guide/quick-start/intro.md',
+    activeMatch: '^/guide/',
+  },
+  {
+    text: '配置',
+    icon: 'icon-park-outline:setting-two',
+    link: '/notes/theme/config/intro.md',
+    activeMatch: '^/config/',
+  },
+  {
+    text: '博客',
+    link: '/blog/',
+    icon: 'material-symbols:article-outline',
+    activeMatch: '^/(blog|article)/',
+  },
+  {
+    text: '案例',
+    link: '/demos/',
+    icon: 'map:wind-surfing',
+  },
+  {
+    text: '更多',
+    icon: 'icon-park-outline:more-three',
+    items: [
+      { text: '常见问题', link: '/faq/', icon: 'wpf:faq' },
+      { text: '喝杯奶茶', link: '/sponsor/', icon: 'line-md:coffee-loop' },
+      { text: '主题工具', link: '/tools/', icon: 'jam:tools' },
+      { text: '友情链接', link: '/friends/', icon: 'carbon:friendship' },
+      {
+        text: 'Vuepress',
+        icon: 'logos:vue',
+        items: [
+          { text: '官方文档', link: 'https://v2.vuepress.vuejs.org', icon: 'logos:vue' },
+          { text: '生态系统', link: 'https://ecosystem.vuejs.press/', icon: 'logos:vue' },
+        ],
+      },
+    ],
+  },
+  {
+    text: `4.0.2505.13`,
+    icon: 'codicon:versions',
+    badge: '新',
+    items: [
+      { text: '更新日志', link: '/changelog/' },
+      { text: '参与贡献', link: '/contributing/' },
+    ],
   },
 ])
 
 export const enNavbar = defineNavbarConfig([
-  { text: 'Home', link: '/en/' },
-  { text: 'Blog', link: '/en/blog/' },
-  { text: 'Tags', link: '/en/blog/tags/' },
-  { text: 'Archives', link: '/en/blog/archives/' },
   {
-    text: 'Notes',
-    items: [{ text: 'Demo', link: '/en/notes/demo/README.md' }]
+    text: 'Guide',
+    icon: 'icon-park-outline:guide-board',
+    link: '/en/guide/intro/',
+    activeMatch: '^/en/guide/',
+  },
+  {
+    text: 'Config',
+    icon: 'icon-park-outline:setting-two',
+    link: '/en/config/intro/',
+    activeMatch: '^/en/config/',
+  },
+  {
+    text: 'Blog',
+    link: '/en/blog/',
+    icon: 'material-symbols:article-outline',
+    activeMatch: '^/en/(blog|article)/',
+  },
+  {
+    text: 'More',
+    icon: 'icon-park-outline:more-three',
+    items: [
+      {
+        text: 'Vuepress',
+        items: [
+          { text: 'Official Docs', link: 'https://v2.vuepress.vuejs.org' },
+          { text: 'Ecosystem', link: 'https://ecosystem.vuejs.press/' },
+        ],
+      },
+    ],
+  },
+  {
+    text: `4.0.2505.13`,
+    icon: 'codicon:versions',
+    items: [
+      { text: 'Changelog', link: '/changelog/' },
+      { text: 'Contributing', link: '/contributing/' },
+    ],
   },
 ])
-
